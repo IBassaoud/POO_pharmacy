@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacie</title>
+    <script src="pharmachie_classes.js"></script>
+    <script src="pharmacie.js" defer></script>
+    <link rel="stylesheet" href="pharmacie_style.css">
+
+
+    <style>
+
+    </style>
+</head>
+<body>
+    <fieldset id="field_addclient" class="field_1">
+        <legend>Afficher les clients</legend>
+        <div>
+            <button id="mybtn_display">Afficher</button>
+        </div>
+    </fieldset>
+
+    <fieldset id="field_clientlist" class="field_2 class_display">
+        <legend>Client list</legend>
+        <label for="name_client">Look for a client :</label>
+        <input type="text" id="name_client" name="name_client">
+        <button id="search_a_client">Search</button>
+        <button id="display_all_clients">Show all client</button>
+        <div id="display_clientlist">
+            <!--
+            <div id="display_client"></div> -->
+        </div>
+
+    </fieldset>
+
+    <fieldset id="field_meds" class="field_2 class_display">
+        <legend>Affichage des médicaments</legend>
+        <label for="name_medoc">Look for drug :</label>
+        <input type="text" id="name_medoc" name="name_medoc">
+        <button id="search_a_medoc">Search</button>
+        <button id="display_all_meds">Show all drugs</button>
+        <div id="display_medoc_list"></div>
+        </div>
+
+    </fieldset>
+
+    <fieldset id="field_approvisionnement" class="field_3 class_display">
+        <legend>Approvisionnement médicament</legend>
+        <div class="field_3_child">
+            <label for="name" class="field_3_child_item1">Nom du médicament :</label>
+            <input type="text" id="medicament" name="medicament" placeholder="Type here the medicament" class="field_3_child_item2">
+            <button id="mybtn_med_search" type="Submit" class="field_3_child_item3">Search</button>
+        </div>
+        <div class="field_3_child">
+            <label for="med_quantite" class="field_3_child_item1">Quantité à ajouter :</label>
+            <input type="number" id="med_quantite" name="med_quantite" placeholder="Type here the quantity" class="field_3_child_item2">
+            <button id="add_quantity" class="field_3_child_item3">Add</button>
+        </div>
+        <div class="field_3_child">
+            <label for="med_prix" class="field_3_child_item1">Modifier le prix :</label>
+            <input type="number" id="med_prix" name="med_prix" placeholder="Type here the new price" class="field_3_child_item2">
+            <button id="add_new_price" class="field_3_child_item3">Edit</button>
+        </div>
+
+        <div id="display_med_item"></div>
+        <div id="update_inventory" ></div>
+        <div id="update_price"></div>
+    </fieldset>
+
+    <fieldset id="field_achat" class="field_4 class_display">
+        <legend>Achat de médicament</legend>
+        <div class="field_4_child">
+            <label for="HA_client" class="field_4_child_item1">Nom du client :</label>
+            <input type="text" id="HA_client" name="HA_client" placeholder="Type here the client name" class="field_4_child_item2">
+        </div>
+        <div class="field_4_child">
+            <label for="HA_med" class="field_4_child_item1">Nom du médicament :</label>
+            <input type="text" id="HA_med" name="HA_med" placeholder="Type here the medicament" class="field_4_child_item2">
+        </div>
+        <div class="field_4_child">
+            <label for="med_quantity_purchased" class="field_4_child_item1">Quantité :</label>
+            <input type="number" id="med_quantity_purchased" name="med_quantity_purchased" placeholder="Type here the quantity" class="field_4_child_item2">
+        </div>
+        <div class="purchase_footer ">
+            <button id="mybtn_purchase" class="purchase_footer_item">Purchase</button>
+            <div id="display_medoc_purchased" class="purchase_footer_item"></div>
+        </div>
+        
+    </fieldset>
+    
+    <fieldset id="field_quitter" class="field_5">
+        <legend>Mettre fin au programme</legend>
+
+        <div>
+            <button id="mybtn_leave" class="field_5_child">Quitter</button>
+        </div>
+        <div id="display_leave_msg" class="field_5_child"></div>
+</fieldset>
+
+</body>
+</html>
